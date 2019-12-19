@@ -16,11 +16,23 @@
 =end%>
 
 <h1>Something</h1>
-
-<%= form_tag('/users', method: :post) do -%>
+<%
+=begin%>
+ <%= form_tag('/users', method: :post) do -%>
   <div><%= text_field_tag 'username' %></div>
   <div><%= email_field_tag 'email' %></div>
   <div><%= password_field_tag 'password' %></div>
   <div><%= password_field_tag 'password_confirmation' %></div>
   <div><%= submit_tag 'Save' %></div>
-<% end -%>
+<% end -%> 
+<%
+=end%>
+
+<%= form_for @user do |form|%>
+  <%= form.label :username, 'Your username'%>
+  <%= form.text_field :username, placeholder: "Your name here" %>
+  <%= form.email_field :email, value: "foo@bar.com" %>
+  <%= form.password_field :password %>
+  <%= form.password_field :password_confirmation %>
+  <%= form.submit %>
+<% end%>
