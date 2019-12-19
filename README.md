@@ -29,13 +29,14 @@ If you followed the steps correctly, you should be able to run the Rails server 
 ```bash
 rails server
 ```
-The system will be served on **localhost:3000/**, but you won't be able to interact with it through your browser. 
-In order to interact with the database, you'll need to use the rails console, with:
-```bash
-rails console
-```
 ## Users, Posts and comments
+Users are created in the url
 
+**"/users/new"**
+
+And edited in the url:
+
+**/users/[user_id]/edit**
 
 ## Dependencies
 
